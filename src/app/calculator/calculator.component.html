@@ -1,0 +1,18 @@
+<mat-card class="calculator">
+<div class="screen-calculator">
+  <p class="display-message">{{displayMessage}}</p>
+</div>
+<div class="input-calculator">
+  <div class="numbers-calculator">
+    <button mat-stroked-button *ngFor="let number of [0,1,2,3,4,5,6,7,8,9]" (click)="calculateResult(number)">{{number}}</button>
+  </div>
+  <div class="actions-calculator">
+    <button mat-stroked-button (click)="doAction('+')">+</button>
+    <button mat-stroked-button (click)="doAction('-')">-</button>
+    <button mat-stroked-button (click)="doAction('/')">/</button>
+    <button mat-stroked-button (click)="doAction('*')">*</button>
+    <button mat-stroked-button (click)="doAction('C')">C</button>
+    <button mat-stroked-button (click)="doAction('=')">=</button>
+  </div>
+</div>
+</mat-card>
